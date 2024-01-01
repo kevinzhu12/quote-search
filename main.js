@@ -19,40 +19,6 @@ const fuseOptions = {
 	]
 };
 
-/*
-const list = [
-    {
-        "quote": "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard...",
-        "author": "Marilyn Monroe",
-        "category": "attributed-no-source, best, life, love, mistakes, out-of-control, truth, worst"
-    },
-    {
-        "quote": "You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nob...",
-        "author": "William W. Purkey",
-        "category": "dance, heaven, hurt, inspirational, life, love, sing"
-    },
-    {
-        "quote": "You know you're in love when you can't fall asleep because reality is finally better than your dream...",
-        "author": "Dr. Seuss",
-        "category": "attributed-no-source, dreams, love, reality, sleep"
-    },
-    {
-        "quote": "A friend is someone who knows all about you and still loves you.",
-        "author": "Elbert Hubbard",
-        "category": "friend, friendship, knowledge, love"
-    },
-    {
-        "quote": "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love ca...",
-        "author": "Martin Luther King Jr., A Testament of Hope: The Essential Writings and Speeches",
-        "category": "darkness, drive-out, hate, inspirational, light, love, peace"
-    },
-    {
-        "quote": "We accept the love we think we deserve.",
-        "author": "Stephen Chbosky, The Perks of Being a Wallflower",
-        "category": "inspirational, love"
-    }
-]
-*/
 let fuse = null
 
 
@@ -67,13 +33,16 @@ fetch('./list.json')
 function updateValue(e) { //  This function is called each time there is change to input (letter, delete, etc.)
     const element = document.getElementById("paragraph"); 
 
+    /*
     while (element.hasChildNodes()) //  This removes the previous text so there aren't multiple duplicate quotes
         element.removeChild(element.firstChild)
+    */
 
     const results = fuse.search(e.target.value)
     console.log(results);
     let numResults = Math.min(results.length, 10)
 
+    /*
     for (let i = 0; i < numResults; i++) {
         const div = document.createElement("div"); //  New div for each quote and author
 
@@ -89,8 +58,61 @@ function updateValue(e) { //  This function is called each time there is change 
         div.appendChild(author_text)
         element.appendChild(div);
     }
-   
+
+    */
+
+    if (results[0].item.quote != null) {
+        const p1q = document.getElementById("p1q")
+        const p1a = document.getElementById("p1a")
+        p1q.textContent = '"' + results[0].item.quote + '"' 
+        p1a.textContent = "- " + results[0].item.author
+
+        const p2q = document.getElementById("p2q")
+        const p2a = document.getElementById("p2a")
+        p2q.textContent = '"' + results[1].item.quote + '"' 
+        p2a.textContent = "- " + results[1].item.author
+
+        const p3q = document.getElementById("p3q")
+        const p3a = document.getElementById("p3a")
+        p3q.textContent = '"' + results[2].item.quote + '"' 
+        p3a.textContent = "- " + results[2].item.author
+
+        const p4q = document.getElementById("p4q")
+        const p4a = document.getElementById("p4a")
+        p4q.textContent = '"' + results[3].item.quote + '"' 
+        p4a.textContent = "- " + results[3].item.author
+
+        const p5q = document.getElementById("p5q")
+        const p5a = document.getElementById("p5a")
+        p5q.textContent = '"' + results[4].item.quote + '"' 
+        p5a.textContent = "- " + results[4].item.author
+
+        const p6q = document.getElementById("p6q")
+        const p6a = document.getElementById("p6a")
+        p6q.textContent = '"' + results[5].item.quote + '"' 
+        p6a.textContent = "- " + results[5].item.author
+
+        const p7q = document.getElementById("p7q")
+        const p7a = document.getElementById("p7a")
+        p7q.textContent = '"' + results[6].item.quote + '"' 
+        p7a.textContent = "- " + results[6].item.author
+
+        const p8q = document.getElementById("p8q")
+        const p8a = document.getElementById("p8a")
+        p8q.textContent = '"' + results[7].item.quote + '"' 
+        p8a.textContent = "- " + results[7].item.author
+
+        const p9q = document.getElementById("p9q")
+        const p9a = document.getElementById("p9a")
+        p9q.textContent = '"' + results[8].item.quote + '"' 
+        p9a.textContent = "- " + results[8].item.author
+
+        const p10q = document.getElementById("p10q")
+        const p10a = document.getElementById("p10a")
+        p10q.textContent = '"' + results[9].item.quote + '"' 
+        p10a.textContent = "- " + results[9].item.author
+    }
     
+
+
 }
-
-
