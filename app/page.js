@@ -41,7 +41,7 @@ export default function Home() {
       </form>
       <div id="paragraph">
         {quotes.map((quote) => {
-          return <Quote quote={quote.quote} author={quote.author} />
+          return <Quote quote={quote.quote} author={quote.author} key={quote.quote} />
         })}
       </div>
     </main>
