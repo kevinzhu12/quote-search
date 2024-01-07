@@ -28,7 +28,7 @@ export default function Home() {
   }, 200)
 
   return (
-    <main className=" font-inter font-medium min-h-screen bg-gradient-to-r from-white to-blue-300">
+    <main className=" font-inter font-medium min-h-screen bg-gradient-to-r from-white to-blue-200">
       <h1 className=" font-bold text-center text-4xl pt-14">
         quote search
       </h1>
