@@ -2,7 +2,7 @@
 QuoteSearch is a web application search tool that allows users to quickly search for quotes of any desired topic. These topics can be themes (love, childhood, growth, etc.), specific textual excerpts, or authors/speakers. The search engine uses real-time search, meaning each character input in the search bar shows updated results. There is no need for a search button. The dataset I am using is a Kaggle dataset [Quotes](https://www.kaggle.com/datasets/manann/quotes-500k) that includes almost 500,000 quotes. Each quote has features "quote", "author", and "categories". 
 
 # Demo
-Try [QuoteSearch](quote-search3.vercel.app)
+Try [QuoteSearch](https://quote-search3.vercel.app)
 
 https://github.com/kevinzhu12/quote-search/assets/145217160/3b52633f-e2db-4abe-9d98-35006bf2545d
 
